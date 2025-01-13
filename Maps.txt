@@ -1,29 +1,29 @@
- 1 - Doom - The Way id Did                                         51 - DOOM 2 - Flashback to Hellbound           101 - Masterlevels                                 H1  - Heretic - Faithless
- 2 - Doom II - The Way id Did                                      52 - Sigil II                                  102 - Sigil                                        H2  - Heretic - Wayfarer
- 3 - DMP 2014 4v4                                                  53 - Community Chest 3                         103 - No Rest for the Living                       H3  - Heretic - Sold Soul
- 4 - Hadron                                                        54 - Runaway Train                             104 - Legacy of Rust                               H4  - Heretic - Call of the Apostate
- 5 - Hellbound                                                     55 - Threnody                                  105 - Jade Earth                                   H5  - Heretic - Quest for the Crystal Skulls
- 6 - Inferno Terror                                                56 - Strain                                    106 - Earth                                        H6  - Heretic - Dungeons and monsters
- 7 - Maps of Chaos Standart (Doom 1)                               57 - Void And Rainbow (NoMod)                  107 - PHOBOS: ANOMALY REBORN                       H7  - Heretic - HYMN: A Heretic Community Project
- 8 - Maps of Chaos Standart (Doom 2)                               58 - Ancient Aliens                            108 - Struggle - Antaresian Legacy (NoMod)         H8  - Heretic - Sitnalta
- 9 - Memento Mori                                                  59 - TNT: Revilution                           109 - Japanese Community Project                   H9  - Heretic - Treasure Chest
-10 - Memento Mori 2                                                60 - Miasma                                    110 - The City of The Damned Apocalypse (NoMod)    H10 - Heretic - Blasphemous Experiments
-11 - Requiem                                                       61 - Doomsday of UAC                           111 - Maskim Xul (NoMod)                           H11 - Heretic - Master of Chaos
-12 - Final Doom Plutonia                                           62 - Illuminatus                               112 - Hellcore 2.0
-13 - Final Doom TnT                                                63 - FBK                                       113 - Going Down                                   HX1 - Hexen - Shadows of Chronos
-14 - Strange Aeons                                                 64 - 1000 Lines 2                              114 - Stardate 20x6                                HX2 - Hexen - Cyrgoth's Revenge
-15 - Valiant (NoMod)                                               65 - 1000 Lines                                115 - The Ultimate Torment and Torture             HX3 - Hexen - Afterlands
-16 - Sunlust                                                       66 - RAY MOHAWK 2                              116 - NOVA II: New Dawn                            HX4 - Hexen - 4 Weeks of Pain
-17 - Back to Saturn Episode 1: Get out of my Stations              67 - TNT Goes Boom                             117 - Impossible: A New Reality                    HX5 - Hexen - Penumbra
-18 - Back to Saturn Episode 2: Tower in the Fountain of Sparks     68 - Deus Vult                                 118 - Songs of the Damned                          HX6 - Hexen - Tower of Chaos
-19 - Death Project                                                 69 - Community Chest 2                         119 - UAC Ultra (v1.2)                             HX7 - Hexen - A new World
-20 - Simplistic Evil                                               70 - NUTS                                      120 - No End in Sight                              HX8 - Hexen - Descent Into the Abyss
-21 - Hell Revealed 1                                               71 - Void                                      121 - Disturbia                                    HX9 - Hexen - Shades of Darkness
-22 - Hell Revealed 2                                               72 - The Sky May Be                            122 - Sunder                                      HX10 - Hexen - Scourge of Viscerus
-23 - e1m1 Reloaded                                                 73 - Speed of Doom                             123 - Doom 64 (NoMod)                             HX11 - Hexen - Realms of Cronos
-24 - Doom                                                          74 - Eternal of Doom                           124 - Ashes EP 1 (NoMod)
-25 - Doom 2                                                        75 - Thunderpeak                               125 - Ashes EP 2 (NoMod)
-26 - Eternally                                                     76 - Comatose                                  126 - Ashes Hard Rset (NoMod)
+ 1 - Doom - The Way id Did                                         51 - DOOM 2 - Flashback to Hellbound            101 - Legacy of Rust                                H1   - Heretic - Shadow of the Serpent Riders
+ 2 - Doom II - The Way id Did                                      52 - Sigil II                                   102 - Jade Earth                                    H2   - Heretic - Faithless
+ 3 - DMP 2014 4v4                                                  53 - Community Chest 3                          103 - Earth                                         H3   - Heretic - Wayfarer
+ 4 - Hadron                                                        54 - Runaway Train                              104 - PHOBOS: ANOMALY REBORN                        H4   - Heretic - Sold Soul
+ 5 - Hellbound                                                     55 - Threnody                                   105 - Struggle - Antaresian Legacy (NoMod)          H5   - Heretic - Call of the Apostate
+ 6 - Inferno Terror                                                56 - Strain                                     106 - Japanese Community Project                    H6   - Heretic - Quest for the Crystal Skulls
+ 7 - Maps of Chaos Standart (Doom 1)                               57 - Void And Rainbow (NoMod)                   107 - The City of The Damned Apocalypse (NoMod)     H7   - Heretic - Dungeons and monsters
+ 8 - Maps of Chaos Standart (Doom 2)                               58 - Ancient Aliens                             108 - Maskim Xul (NoMod)                            H8   - Heretic - HYMN: A Heretic Community Project
+ 9 - Memento Mori                                                  59 - TNT: Revilution                            109 - Hellcore 2.0                                  H9   - Heretic - Sitnalta
+10 - Memento Mori 2                                                60 - Miasma                                     110 - Going Down                                    H10  - Heretic - Treasure Chest
+11 - Requiem                                                       61 - Doomsday of UAC                            111 - Stardate 20x6                                 H11  - Heretic - Blasphemous Experiments
+12 - Final Doom Plutonia                                           62 - Illuminatus                                112 - The Ultimate Torment and Torture              H12  - Heretic - Master of Chaos
+13 - Final Doom TnT                                                63 - FBK                                        113 - NOVA II: New Dawn                                  
+14 - Strange Aeons                                                 64 - 1000 Lines 2                               114 - Impossible: A New Reality                     HX1  - Hexen - Beyond Heretic
+15 - Valiant (NoMod)                                               65 - 1000 Lines                                 115 - Songs of the Damned                           HX2  - Hexen - Deathking of the Citadel
+16 - Sunlust                                                       66 - RAY MOHAWK 2                               116 - UAC Ultra (v1.2)                              HX3  - Hexen - Shadows of Chronos
+17 - Back to Saturn Episode 1: Get out of my Stations              67 - TNT Goes Boom                              117 - No End in Sight                               HX4  - Hexen - Cyrgoth's Revenge
+18 - Back to Saturn Episode 2: Tower in the Fountain of Sparks     68 - Deus Vult                                  118 - Disturbia                                     HX5  - Hexen - Afterlands
+19 - Death Project                                                 69 - Community Chest 2                          119 - Sunder                                        HX6  - Hexen - 4 Weeks of Pain
+20 - Simplistic Evil                                               70 - NUTS                                       120 - Doom 64 (NoMod)                               HX7  - Hexen - Penumbra
+21 - Hell Revealed 1                                               71 - Void                                       121 - Ashes EP 1 (NoMod)                            HX8  - Hexen - Tower of Chaos
+22 - Hell Revealed 2                                               72 - The Sky May Be                             122 - Ashes EP 2 (NoMod)                            HX9  - Hexen - A new World
+23 - e1m1 Reloaded                                                 73 - Speed of Doom                              123 - Ashes Hard Rset (NoMod)                       HX10 - Hexen - Descent Into the Abyss
+24 - Doom                                                          74 - Eternal of Doom                                                                                HX11 - Hexen - Shades of Darkness
+25 - Doom 2                                                        75 - Thunderpeak                                                                                    HX12 - Hexen - Scourge of Viscerus
+26 - Eternally                                                     76 - Comatose                                                                                       HX13 - Hexen - Realms of Cronos
 27 - Hell on Earth (Brutal Doom Map)                               77 - Eternal Doom IV: Return from Oblivion
 28 - Eviltech: Soul of a Megawad                                   78 - The Adventure of Square (NoMod)
 29 - 1994 Tune-up Community Project                                79 - Scythe 2
@@ -32,19 +32,19 @@
 32 - Dark 7                                                        82 - Final NeoDoom (NoMod)
 33 - DemonFear                                                     83 - Pirates (NoMod)
 34 - Alien Vendetta                                                84 - Infinite (NoMod)
-35 - Armadosia                                                     85 - Hexen (NoMod)
-36 - Cleimos 2                                                     86 - Hexen Deathkings (NoMod)
-37 - Dimensions of Time                                            87 - Heretic (NoMod)
-38 - Caverns of Darkness                                           88 - Urban Brawl: Action DooM 2 (NoMod)
-39 - Ni'mRoD - IXNAY on the HOMBRE (NoMod)                         89 - Kama Sutra
-40 - CH Retro Episode                                              90 - The Given
-41 - Doom 2 Reload                                                 91 - Equinox (NoMod)
-42 - Epic 2 (NoMod)                                                92 - Scythe
-43 - H2H-Xmas                                                      93 - Knee-Deep in ZDoom
-44 - Icarus: Alien Vanguard                                        94 - Deus Vult 2
-45 - Plutonia: Revisited Community Project                         95 - Sacrament
-46 - Plutonia 2                                                    96 - ZDoom Community Map Project II
-47 - The Darkening                                                 97 - Counterattack
-48 - The Darkening 2                                               98 - Resurgence
-49 - Whispers of Satan                                             99 - Putrefier
-50 - No Sleep for the Dead                                        100 - Hell Ground
+35 - Armadosia                                                     85 - Urban Brawl: Action DooM 2 (NoMod)
+36 - Cleimos 2                                                     86 - Kama Sutra
+37 - Dimensions of Time                                            87 - The Given
+38 - Caverns of Darkness                                           88 - Equinox (NoMod)
+39 - Ni'mRoD - IXNAY on the HOMBRE (NoMod)                         89 - Scythe
+40 - CH Retro Episode                                              90 - Knee-Deep in ZDoom
+41 - Doom 2 Reload                                                 91 - Deus Vult 2
+42 - Epic 2 (NoMod)                                                92 - Sacrament
+43 - H2H-Xmas                                                      93 - ZDoom Community Map Project II
+44 - Icarus: Alien Vanguard                                        94 - Counterattack
+45 - Plutonia: Revisited Community Project                         95 - Resurgence
+46 - Plutonia 2                                                    96 - Putrefier
+47 - The Darkening                                                 97 - Hell Ground
+48 - The Darkening 2                                               98 - Masterlevels
+49 - Whispers of Satan                                             99 - Sigil
+50 - No Sleep for the Dead                                        100 - No Rest for the Living
