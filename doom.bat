@@ -17,12 +17,10 @@ echo.
 set /P "M=Wähle eine Karte: "
 cls
 
-rem CSV-Daten dynamisch laden
 for /f "usebackq skip=1 tokens=1,* delims=," %%a in ("maps.csv") do (
     set "map[%%a]=%%b"
 )
 
-rem Prüfen, ob Eingabe gültig ist
 IF "%M%"=="0" exit /B
 IF "%M%"=="r" GOTO menu
 if "%M%"=="" goto menu
@@ -32,23 +30,19 @@ if not defined map[%M%] (
     goto menu
 )
 
-rem Ausgewählte Karte verarbeiten
 set "mapData=!map[%M%]!"
 set /a index=1
 
-rem Spalten dynamisch in Variablen speichern
 for /f "tokens=1,* delims=," %%x in ("!mapData!") do (
     set "column[1]=%%x"
     set "remainingData=%%y"
 )
 
-rem Mapname und PWADs trennen
 for /f "tokens=1* delims=," %%x in ("!remainingData!") do (
     set "mapname=%%x"
     set "pwadData=%%y"
 )
 
-rem PWADs dynamisch zusammenführen
 set "fileParams="
 set "displayFileParams="
 
@@ -59,7 +53,6 @@ for %%p in (!pwadData!) do (
     )
 )
 
-rem IWAD anzeigen
 set "core=!column[1]!"
 if "!core!"=="maps\iwad\doom.wad" (
     set "displayCore=Doom I"
@@ -119,7 +112,6 @@ echo Debug: Map = %mapname%
 echo Debug: IWAD = %displayCore%
 echo Debug: PWAD = %displayFileParams%
 
-rem Modus starten
 if "%modChoice%"=="1" (
     echo Mod:  Project Brutality
     "%gz%" +logfile "logfile.txt" -iwad "%core%" -file %PBD% !fileParams!
@@ -137,7 +129,6 @@ if "%modChoice%"=="1" (
     "%gz%" +logfile "logfile.txt" -iwad "%core%" -file !fileParams!
 )
 
-rem Aufräumen
 set "mapname="
 set "core="
 set "fileParams="
