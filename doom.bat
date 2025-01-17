@@ -1,3 +1,4 @@
+REM created by Apenotis
 @echo off
 
 chcp 65001 >nul
