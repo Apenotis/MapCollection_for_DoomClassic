@@ -34,7 +34,7 @@ if not defined map[%M%] (
     goto menu
 )
 
-REM Set PWAD
+REM Set IWAD & PWAD
 set "mapData=!map[%M%]!"
 set /a index=1
 
