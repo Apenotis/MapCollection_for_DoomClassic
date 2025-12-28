@@ -1,149 +1,102 @@
-ID,Iwad,Mapname,Map1,Map2,Map3,Map4,Map5,Map6,;parameter
-1,maps\iwad\doom.wad,Doom - The Way id Didy,maps\pwad\DTTW\DTWID.wad
-2,maps\iwad\doom2.wad,Doom II - The Way id Did,maps\pwad\DTTW\D2TWID.wad,maps\pwad\DTTW\D2TWID.deh
-3,maps\iwad\doom2.wad,DMP-2014-4v4,maps\pwad\DMP\DMP2014v4.wad
-4,maps\iwad\doom.wad,Hadron,maps\pwad\Hadron\Hadron.wad
-5,maps\iwad\doom2.wad,Hellbound,maps\pwad\Hellbound\Hellbnd.wad
-6,maps\iwad\doom.wad,Inferno Terror,maps\pwad\Inferno\inferno-teror.wad
-7,maps\iwad\doom.wad,Maps of Chaos (doom 1),maps\pwad\Mapchaos\mapsofchaos.wad
-8,maps\iwad\doom2.wad,Maps of Chaos (doom 2),maps\pwad\Mapchaos\mapsofchaos.wad
-9,maps\iwad\doom2.wad,Memento Mori,maps\pwad\Memento\MM.wad
-10,maps\iwad\doom2.wad,Memento Mori 2,maps\pwad\Memento\MM2.wad
-11,maps\iwad\doom2.wad,Requiem,maps\pwad\Requiem\Requiem.wad
-12,maps\iwad\Plutonia.wad,Final Doom Plutonia
-13,maps\iwad\tnt.wad,Final Doom TnT-Evilution
-14,maps\iwad\doom2.wad,Strange Aeons,maps\pwad\Strange\strangeaeonsv38.pk3
-15,maps\iwad\doom2.wad,Valiant,maps\pwad\Valiant\Valiant.wad
-16,maps\iwad\doom2.wad,Sunlust,maps\pwad\Sunlust\Sunlust.wad
-17,maps\iwad\doom2.wad,Back to Saturn Episode 1,maps\pwad\Back_to_Saturn\btsx_e1.wad,maps\pwad\Back_to_Saturn\btsx_e1.deh
-18,maps\iwad\doom2.wad,Back to Saturn Episode 2,maps\pwad\Back_to_Saturn\btsx_e2a.wad,maps\pwad\Back_to_Saturn\btsx_e2b.wad,maps\pwad\Back_to_Saturn\btsx_e2.deh
-19,maps\iwad\doom2.wad,Death Project,maps\pwad\Death_Project\DeathProject.wad
-20,maps\iwad\doom2.wad,Simplistic Evil,maps\pwad\Simplistic_Evil\SE.wad
-21,maps\iwad\doom2.wad,Hell Revealed 1,maps\pwad\HellRevealed\HR.WAD
-22,maps\iwad\doom2.wad,Hell Revealed 2,maps\pwad\HellRevealed\hr2final.wad
-23,maps\iwad\doom2.wad,e1m1 Reloaded,maps\pwad\e1m1\Reloaded.wad
-24,maps\iwad\doom.wad,Doom 1,maps\pwad\HD\DoomHDTextures.pk3
-25,maps\iwad\doom2.wad,Doom 2: Hell on Earth,maps\pwad\HD\DoomHDTextures.pk3
-26,maps\iwad\doom2.wad,Eternally,maps\pwad\Eternally\Eternally.wad
-27,maps\iwad\doom2.wad,Hell on Earth,maps\pwad\hellonearth\hellonearthstarterpack.wad
-28,maps\iwad\doom2.wad,Eviltech: Soul of a Megawad,maps\pwad\Eviltech\eviltech.wad
-29,maps\iwad\doom2.wad,1994 Tune-up Community Project,maps\pwad\1994\1994TU.wad
-30,maps\iwad\doom.wad,A Doom Odyssey 10th Anniversary Edition,maps\pwad\2002ad\2002ad10.wad,
-31,maps\iwad\doom.wad,ConC.E.R.Ned,maps\pwad\concern\concern.wad
-32,maps\iwad\doom2.wad,Dark 7,maps\pwad\dark7\dark7.wad
-33,maps\iwad\doom2.wad,DemonFear,maps\pwad\DemonFear\dmonfear.wad
-34,maps\iwad\doom2.wad,Alien Vendetta,maps\pwad\alienvendetta\av.wad
-35,maps\iwad\doom2.wad,Armadosia,maps\pwad\Armadosia\Armadosia.wad
-36,maps\iwad\doom2.wad,Cleimos,maps\pwad\Cleimos\Cleim20.wad
-37,maps\iwad\doom2.wad,Dimensions of Time,maps\pwad\dot\dot.wad
-38,maps\iwad\doom2.wad,Caverns of Darkness,maps\pwad\Caverns_of_Darkness\cod.wad,maps\pwad\Caverns_of_Darkness\codlev.wad,maps\pwad\Caverns_of_Darkness\keys.csc
-39,maps\iwad\doom2.wad,Ni'mRoD - IXNAY on the HOMBRE,maps\pwad\nimrod\nimrod.wad
-40,maps\iwad\doom.wad,CH Retro Episode,maps\pwad\retroeps\retroeps.wad
-41,maps\iwad\doom2.wad,maps\iwad\doom 2 Reload,maps\pwad\d2reload\d2reload.wad
-42,maps\iwad\doom2.wad,Epic 2,maps\pwad\Epic2\Epic2.wad
-43,maps\iwad\doom2.wad,H2H-Xmas,maps\pwad\h2xmas\H2H-Xmas.wad
-44,maps\iwad\doom2.wad,Icarus: Alien Vanguard,maps\pwad\icarus\icarus.wad
-45,maps\iwad\doom2.wad,Plutonia: Revisited Community Project,maps\pwad\Plutonia\prcp.wad
-46,maps\iwad\doom2.wad,Plutonia 2,maps\pwad\Plutonia2\pl2.wad
-47,maps\iwad\doom2.wad,The Darkening,maps\pwad\Darken\darken.wad,maps\pwad\Darken\RESOURCE.WAD,maps\pwad\Darken\DARK.DEH
-48,maps\iwad\doom2.wad,The Darkening 2,maps\pwad\Darken2\darken2.wad
-49,maps\iwad\doom2.wad,Whispers of Satan,maps\pwad\wos\wos.wad
-50,maps\iwad\doom.wad,No Sleep for the Dead,maps\pwad\nos4dead\nos4dead.wad
-51,maps\iwad\doom2.wad,maps\iwad\doom 2 - Flashback to Hell,maps\pwad\FTH\fth666.wad
-52,maps\iwad\doom.wad,Sigil II,maps\pwad\Sigil2\SIGIL_II_V1_0.WAD
-53,maps\iwad\doom2.wad,Community Chest 3,maps\pwad\Cchest\cchest3.wad
-54,maps\iwad\doom2.wad,Runaway Train,maps\pwad\rtrain\NJTRAIN.wad
-55,maps\iwad\doom2.wad,Threnody,maps\pwad\formalhaut\thtthren.wad
-56,maps\iwad\doom2.wad,Strain,maps\pwad\strain\strain.wad
-57,maps\iwad\doom2.wad,Void And Rainbow,maps\pwad\rainbow\RAINBOW(GZD3.2.0).pk3
-58,maps\iwad\doom2.wad,Ancient Aliens,maps\pwad\aliens\aaliens_v1_2.wad
-59,maps\iwad\doom2.wad,TNT: Revilution,maps\pwad\Revilution\tntr.wad
-60,maps\iwad\doom2.wad,Miasma,maps\pwad\Miasma\miasma.wad
-61,maps\iwad\doom2.wad,Doomsday of UAC,maps\pwad\doomsday\uac_dead.wad
-62,maps\iwad\doom2.wad,Illuminatus,maps\pwad\Illuminatus\illumi.wad
-63,maps\iwad\doom2.wad,FBK,maps\pwad\FBK\FBK_1.wad
-64,maps\iwad\doom2.wad,1000 Lines 2,maps\pwad\1000_Lines\1klinecp2.wad
-65,maps\iwad\doom2.wad,1000 Lines 1,maps\pwad\1000_Lines\1klinecp.wad
-66,maps\iwad\doom2.wad,RAY MOHAWK 2,maps\pwad\RAY_MOHAWK _2\MO2BONUS.wad
-67,maps\iwad\doom2.wad,TNT Goes Boom,maps\pwad\TNT_Goes_Boom!\tntgb.wad
-68,maps\iwad\doom2.wad,Deus Vult,maps\pwad\Deus_Vult\DV.wad
-69,maps\iwad\doom2.wad,Communtiy Chest 2,maps\pwad\Cchest2\cchest2.wad
-70,maps\iwad\doom2.wad,NUTS,maps\pwad\NUTS\Nuts.wad
-71,maps\iwad\doom2.wad,Void,maps\pwad\Void\Void.wad
-72,maps\iwad\doom.wad,The Sky May Be,maps\pwad\Sky\_SMB417.wad
-73,maps\iwad\doom2.wad,Speed of Doom,maps\pwad\Sod\SODfinal.wad
-74,maps\iwad\doom2.wad,Eternal Doom,maps\pwad\Eternal\ETERNALL.WAD
-75,maps\iwad\doom2.wad,Thunderpeak,maps\pwad\Thunderpeak\ThunPeak.wad
-76,maps\iwad\doom2.wad,Comatose,maps\pwad\Comatose\Comatose.wad
-77,maps\iwad\doom2.wad,Eternal Doom IV: Return from Oblivion,maps\pwad\Eternal_doom\ed4_rfo1.wad,-warp 08
-78,maps\iwad\doom2.wad,The Adventure of Square,maps\pwad\Square\square1.pk3
-79,maps\iwad\doom2.wad,Scythe 2,maps\pwad\Scythe2\Scythe2.wad
-80,maps\iwad\doom2.wad,Wolfenstein 3D,maps\pwad\Wolfenstein_3D_TC\Wolf3D_Common.pk7,maps\pwad\Wolfenstein_3D_TC\Wolf3D_Resources.pk3,maps\pwad\Wolfenstein_3D_TC\Wolf3D_HighRes.pk7 -config maps\pwad\Wolfenstein_3D_TC\Wolf3D.cfg
-81,maps\iwad\doom2.wad,Prodoomer,maps\pwad\Prodoomer\PRODOOMERV2.wad
-82,maps\iwad\doom2.wad,Final Neo Doom,maps\pwad\Finalneodoom\FNeoDoom.pk3
-83,maps\iwad\doom2.wad,Pirates,maps\pwad\Pirates\pirates.wad
-84,maps\iwad\doom2.wad,Infinite,maps\pwad\Infinite\doom_Infinite_DEMO_0978_6.pk3
-85,maps\iwad\doom2.wad,Urban Brawl: Action DooM 2,maps\pwad\Action\Action2.wad
-86,maps\iwad\doom2.wad,Kama Sutra,maps\pwad\ksutra\ksutra.wad
-87,maps\iwad\doom2.wad,The Given,maps\pwad\tgiven\TheGiven.wad
-88,maps\iwad\doom2.wad,Equinox,maps\pwad\Equinox\Equinox.wad
-89,maps\iwad\doom2.wad,Scythe,maps\pwad\Scythe\Scythe.wad
-90,maps\iwad\doom.wad,Knee-Deep in ZDoom,maps\pwad\kdizd\kdizd_12.pk3
-91,maps\iwad\doom2.wad,Deus Vult 2,maps\pwad\Deus_Vult\DVII-1i.wad
-92,maps\iwad\doom2.wad,Sacrament,maps\pwad\Sacrament\Sacrment.wad
-93,maps\iwad\doom2.wad,ZDoom Community Map Project II,maps\pwad\zdcmp2\zdcmp2.pk3
-94,maps\iwad\doom2.wad,Counteratack,maps\pwad\Counteratack\mek-catk.wad
-95,maps\iwad\doom2.wad,Resurge,maps\pwad\Resurge\resurge.wad
-96,maps\iwad\doom2.wad,Putrefier,maps\pwad\Putrefier\ma_put.pk3
-97,maps\iwad\doom2.wad,Hell Ground,maps\pwad\Hell_Ground\hg.wad
-98,maps\iwad\doom2.wad,Masterlevel,maps\pwad\Masterlevels\Masterlevels.wad
-99,maps\iwad\doom.wad,Sigil,maps\pwad\Sigil\Sigil.wad
-100,maps\iwad\doom2.wad,No Rest for the Living,maps\pwad\Nerve\nerve.wad
-101,maps\iwad\doom2.wad,Legacy of Rust,maps\pwad\lor\id1.wad
-102,maps\iwad\doom2.wad,Jade Earth,maps\pwad\jadearth\jadearth.wad
-103,maps\iwad\doom2.wad,Earth,maps\pwad\Earth\earth.wad
-104,maps\iwad\doom.wad,PHOBOS: ANOMALY REBORN,maps\pwad\Phobos\par.wad
-105,maps\iwad\doom2.wad,Struggle - Antaresian Legacy,maps\pwad\Strg\strg.wad
-106,maps\iwad\doom2.wad,Japanese Community Project,maps\pwad\JPCP\JPCP.wad
-107,maps\iwad\doom2.wad,The City of The Damned Apocalypse,maps\pwad\Tcotd\tcotd21me.pk3
-108,maps\iwad\doom2.wad,Maskim Xul,maps\pwad\Maskim\MaskimXul.wad
-109,maps\iwad\doom2.wad,Hellcore 2.0,maps\pwad\Hellcore\HC20.wad
-110,maps\iwad\doom2.wad,Going Down,maps\pwad\gd\gd.wad
-111,maps\iwad\doom2.wad,Stardate 20x6,maps\pwad\Stardate\Stardate20x6.wad
-112,maps\iwad\doom2.wad,The Ultimate Torment and Torture,maps\pwad\Tutnt\tutnt-v107.pk3
-113,maps\iwad\doom2.wad,NOVA II: New Dawn,maps\pwad\Nova2\Nova2.wad
-114,maps\iwad\doom2.wad,Impossible: A New Reality,maps\pwad\Imposs\imposs.wad
-115,maps\iwad\doom2.wad,Songs of the Damned,maps\pwad\SotD\songs.wad,maps\pwad\SotD\songs.deh
-116,maps\iwad\doom2.wad,UAC Ultra (v1.2),maps\pwad\UAC\uacultra.wad
-117,maps\iwad\doom2.wad,No End in Sight,maps\pwad\Neis\neis.wad,Neis\neis.deh
-118,maps\iwad\doom2.wad,Disturbia,maps\pwad\Disturbia\Distrbia.wad,maps\pwad\DDDisturbiaV4HMPMax.lmp
-119,maps\iwad\doom2.wad,Sunder,maps\pwad\Sunder\Sunder2407.wad
-120,maps\iwad\doom.wad,Doom 64,maps\pwad\doom64\doom64.iwad,maps\pwad\doom64\DOOM64.CE.Addon.BGM.Extended.pk3,maps\pwad\doom64\DOOM64.CE.Addon.GFX.Brightmaps.pk3,maps\pwad\doom64\DOOM64.CE.Addon.GFX.Parallax.pk3,maps\pwad\doom64\DOOM64.CE.Addon.GFX.PBR.pk3,maps\pwad\doom64\DOOM64.CE.Addon.SFX.HQ.pk3,maps\pwad\doom64\DOOM64.CE.ipk3,maps\pwad\doom64\DOOM64.CE.Maps.LostLevels.pk3
-121,maps\iwad\doom2.wad,Ashes,maps\pwad\Ashes\AshesSAMenu.pk3,maps\pwad\Ashes\lightmodepatch.pk3,maps\pwad\Ashes\Ashes2063Enriched2_23.pk3,maps\pwad\Ashes\Ashes2063EnrichedFDPatch.pk3,-config maps\pwad\Ashes\gzdoom-ashes.ini
-122,maps\iwad\doom2.wad,Ashes,maps\pwad\Ashes\AshesSAMenu.pk3,maps\pwad\Ashes\lightmodepatch.pk3,maps\pwad\Ashes\AshesAfterglow1_16.pk3,-config maps\pwad\Ashes\gzdoom-ashes.ini
-123,maps\iwad\doom2.wad,Ashes,maps\pwad\Ashes\AshesSAMenu.pk3,maps\pwad\Ashes\lightmodepatch.pk3,maps\pwad\Ashes\AshesHardReset_105.pk3,-config maps\pwad\Ashes\gzdoom-ashes.ini
-H1,maps\iwad\heretic.wad,Heretic,maps\pwad\heretic\heretic_gz.pk3
-H2,maps\iwad\heretic.wad,Call of the Apostate,maps\pwad\heretic\call_of_the_Apostate\apostate.wad,maps\pwad\heretic\heretic_gz.pk3
-H3,maps\iwad\heretic.wad,Faithless,maps\pwad\heretic\Faithless\faith_tri_b1a.pk3,maps\pwad\heretic\heretic_gz.pk3
-H4,maps\iwad\heretic.wad,Wayfarer,maps\pwad\heretic\Wayfarer\wayfarer.wad,maps\pwad\heretic\heretic_gz.pk3
-H5,maps\iwad\heretic.wad,Sold Soul,maps\pwad\heretic\Soldsoul\soldsoul.wad,maps\pwad\heretic\Soldsoul\wtome_sa.pk3,maps\pwad\heretic\Soldsoul\patches\wtome_cod.wad,maps\pwad\heretic\Soldsoul\patches\wtome_egp.wad,maps\pwad\heretic\Soldsoul\patches\wtome_ss.wad,maps\pwad\heretic\Soldsoul\patches\wtome_ub.wad,maps\pwad\heretic\heretic_gz.pk3
-H6,maps\iwad\heretic.wad,Quest for the Crystal Skulls,maps\pwad\heretic\qftcs\HER_QFCS.wad,maps\pwad\heretic\heretic_gz.pk3
-H7,maps\iwad\heretic.wad,Dungeons and monsters,maps\pwad\heretic\dam\dngndmn1.wad,maps\pwad\heretic\heretic_gz.pk3
-H8,maps\iwad\heretic.wad,HYMN: A Heretic Community Project,maps\pwad\heretic\hymn\hymn.wad,maps\pwad\heretic\heretic_gz.pk3
-H9,maps\iwad\heretic.wad,Sitnalta,maps\pwad\heretic\sitnalta\sitnalta.pk3,maps\pwad\heretic\heretic_gz.pk3
-H10,maps\iwad\heretic.wad,Treasure Chest,maps\pwad\heretic\htchest\htchest.wad,maps\pwad\heretic\heretic_gz.pk3
-H11,maps\iwad\heretic.wad,Blasphemous Experiments,maps\pwad\heretic\be\Bexper.wad,maps\pwad\heretic\be\Bexhhe.hhe,maps\pwad\heretic\heretic_gz.pk3
-H12,maps\iwad\heretic.wad,Master of Chaos,maps\pwad\heretic\moc\moc11.wad,maps\pwad\heretic\heretic_gz.pk3
-HX1,maps\iwad\hexen.wad,Hexen,maps\pwad\hexen\hexen_gz.pk3
-HX2,maps\iwad\hexen.wad,Hexen Deathkings,maps\pwad\hexen_death\hexdd.wad,maps\pwad\hexen\hexen_gz.pk3
-HX3,maps\iwad\hexen.wad,Shadow of Chronos,maps\pwad\hexen\shadow_of_chronos\kaiser_28.wad,maps\pwad\hexen\hexen_gz.pk3
-HX4,maps\iwad\hexen.wad,Cyrgoth's Revenge,maps\pwad\hexen\Cyrgoth's_Revenge\CYRVENG2.1.wad,maps\pwad\hexen\hexen_gz.pk3
-HX5,maps\iwad\hexen.wad,Afterlands,maps\pwad\hexen\afterlands\aftland1.wad,maps\pwad\hexen\hexen_gz.pk3
-HX6,maps\iwad\hexen.wad,4 Weeks of Pain,maps\pwad\hexen\4weeks\4weeks.pk3,maps\pwad\hexen\hexen_gz.pk3
-HX7,maps\iwad\hexen.wad,Penumbra,maps\pwad\hexen\penumbra\penumbra.wad,maps\pwad\hexen\hexen_gz.pk3
-HX8,maps\iwad\hexen.wad,Tower of Chaos,maps\pwad\hexen\toc\toc.pk3,maps\pwad\hexen\hexen_gz.pk3
-HX9,maps\iwad\hexen.wad,A new World,maps\pwad\hexen\anworld\anw.pk3,maps\pwad\hexen\hexen_gz.pk3
-HX10,maps\iwad\hexen.wad,Descent Into the Abyss,maps\pwad\hexen\dita\dita.pk3,maps\pwad\hexen\hexen_gz.pk3
-HX11,maps\iwad\hexen.wad,Shade of Darkness,maps\pwad\hexen\sod\shadeshexres.pk3,maps\pwad\hexen\sod\shadesMaps.wad,maps\pwad\hexen\hexen_gz.pk3
-HX12,maps\iwad\hexen.wad,Scourge of Viscerus,maps\pwad\hexen\sov\viscerus.pk3,maps\pwad\hexen\hexen_gz.pk3
-HX13,maps\iwad\hexen.wad,Realms of Chronos,maps\pwad\hexen\roc\roc.pk3,maps\pwad\hexen\hexen_gz.pk3
+ID,Iwad,Mapname,pwad,parameter
+1,doom.wad,Ultimate Doom
+2,doom.wad,Sigil,sigil.wad
+3,doom.wad,Sigil 2,sigil2.wad
+4,doom2.wad,Doom II: Hell on Earth
+5,masterlevels.wad,Doom II: Masterlevels
+6,nerve.wad,Doom II: No Rest for the Living
+7,doom2.wad,Doom II: Legacy of Rust,ID1
+8,tnt.wad,Final Doom: TNT:Evilution
+9,plutonia.wad,Final Doom: The Plutonia Experiment
+10,doom.wad,Doom 64,Doom64,1
+
+11,doom2.wad,WoW,cchest3
+12,doom2.wad,Runaway Train,Runawaytrain
+13,doom2.wad,Grove,Grove
+14,doom2.wad,Formalhaut,ThT
+15,doom2.wad,Enterway,Strain
+16,doom2.wad,ToxiCity,Toxicity
+17,doom.wad,Netherworld Citadel,Neis
+18,doom2.wad,Void and Rainbow,Rainbow
+19,doom2.wad,Ancient Aliens,Aaliens
+20,doom2.wad,TNT: Revilution,TnT
+21,doom2.wad,Miasma,Miasma
+22,doom2.wad,Alien Vendetta,Alienvendetta
+23,doom2.wad,Impossible: A New Reality,Impossible
+24,doom2.wad,Run Buddy,Run -WARP 3 -SKILL 4
+25,doom2.wad,Songs of the Damned,Songs
+26,doom2.wad,NOVA II: New Dawn,Nova2
+27,doom.wad,INVASION... Level 2--The Upper Decks,Invasion
+28,doom2.wad,The Ultimate Torment and Torture,Ultimate
+29,doom2.wad,Stardate 20X6,Stardate
+30,doom2.wad,Hellbound,Starport
+31,doom2.wad,Going Down,Goingdown
+32,doom2.wad,Requiem,Requiem
+33,doom2.wad,Plutonia 2,Plutonia2
+34,doom2.wad,Monster Hunter Ltd (Part I),Mohu1
+35,doom2.wad,The Adventures of Square, Episodes 1 and 2,Square
+36,doom2.wad,Japanese Community Project,JpChest
+37,doom2.wad,Hellcore 2.0,Hellcore
+38,doom2.wad,Whispers of Satan,Wos
+39,doom2.wad,UAC Ultra (v1.2),UAC
+40,doom2.wad,Valiant,Valiant
+41,doom2.wad,Deus Vult II,Deus2 +gl_nogl 1 +compatflags 16 +dmflags 2162688
+42,tnt.wad,Eternal Doom,eternal
+43,doom2.wad,Maskim Xul,Maskim
+44,doom2.wad,The City of The Damned Apocalypse,TheCity,1
+45,doom2.wad,Back to Saturn 1,Bts1
+46,doom2.wad,Back to Saturn 2,Bts2
+47,doom2.wad,Back to Saturn 3,Bts3
+48,doom2.wad,Phocas Island 2,Phocas,1
+49,doom2.wad,Struggle - Antaresian Legacy,Struggle,1
+50,doom2.wad,Scythe 2. Version 2,Scythe2
+51,doom2.wad,Hell Ground,Hellground
+52,doom2.wad,Putrefier,Putrefier
+53,doom2.wad,Resurgence,Resurgence
+54,doom2.wad,Counterattack,Dolor
+55,doom2.wad,ZDoom Community Map Project II,ZDoom
+56,doom2.wad,Sacrament,Sacrament,1
+57,doom.wad,Knee-Deep in ZDoom,Knee-Deep
+58,doom2.wad,Scythe,Scythe1
+59,doom2.wad,Equinox,Equinox,1
+60,doom2.wad,The Given,TheGiven
+61,doom2.wad,Kama Sutra,KamaSutra
+62,doom2.wad,Sunlust,Sunlust
+63,doom2.wad,Speed of Doom,Sod
+64,doom2.wad,Urban Brawl: Action DooM 2 + Dead of Winter,Action,1
+65,doom2.wad,Winter's Fury - 10th Anniversary,Winter
+66,doom2.wad,Community Chest 4,Cchest4
+67,doom2.wad,Sunder,Sunder
+68,doom2.wad,Thunderpeak,Thunderpeak
+69,doom2.wad,Community Chest 2,Cchest2
+70,doom2.wad,DOOM II: Hellscape,Hellscape -warp 21
+
+w1,doom2.wad,Wolfenstein 3D,Wolfenstein -config Wolfenstein
+w2,doom2.wad,Wolfenstein 3D
+
+H1,heretic.wad,Heretic,heretic\*.pk3
+H2,heretic.wad,Call of the Apostate,heretic\call_of_the_Apostate\*.wad,heretic\*.pk3
+H3,heretic.wad,Faithless,heretic\Faithless\*.pk3
+H4,heretic.wad,Wayfarer,heretic\Wayfarer\*.wad,heretic\*.pk3
+H5,heretic.wad,Sold Soul,heretic\Soldsoul\*.wad,heretic\Soldsoul\*.pk3,heretic\*.pk3
+H6,heretic.wad,Quest for the Crystal Skulls,heretic\qftcs\*.wad,heretic\*.pk3
+H7,heretic.wad,Dungeons and monsters,heretic\dam\*.wad,heretic\*.pk3
+H8,heretic.wad,HYMN: A Heretic Community Project,heretic\hymn\*.wad,heretic\*.pk3
+H9,heretic.wad,Sitnalta,heretic\sitnalta\*.pk3,heretic\*.pk3
+H10,heretic.wad,Treasure Chest,heretic\htchest\*.wad,heretic\*.pk3
+H11,heretic.wad,Blasphemous Experiments,heretic\be\*.wad,heretic\be\*.hhe,heretic\*.pk3
+H12,heretic.wad,Master of Chaos,heretic\moc\*.wad,heretic\*.pk3
+
+HX1,hexen.wad,Hexen,hexen\*.pk3
+HX2,hexen.wad,Hexen Deathkings,hexdd.wad,hexen\*.pk3
+HX3,hexen.wad,Shadow of Chronos,hexen\shadow_of_chronos\*.wad,hexen\*.pk3
+HX4,hexen.wad,Cyrgoth's Revenge,hexen\Cyrgoth's_Revenge\*.wad,hexen\*.pk3
+HX5,hexen.wad,Afterlands,hexen\afterlands\*.wad,hexen\*.pk3
+HX6,hexen.wad,4 Weeks of Pain,hexen\4weeks\*.pk3,hexen\*.pk3
+HX7,hexen.wad,Penumbra,hexen\penumbra\*.wad,hexen\*.pk3
+HX8,hexen.wad,Tower of Chaos,hexen\toc\*.pk3,hexen\*.pk3
+HX9,hexen.wad,A new World,hexen\anworld\*.pk3,hexen\*.pk3
+HX10,hexen.wad,Descent Into the Abyss,hexen\dita\*.pk3,hexen\*.pk3
+HX11,hexen.wad,Shade of Darkness,hexen\sod\*.pk3,hexen\sod\*.wad,hexen\*.pk3
+HX12,hexen.wad,Scourge of Viscerus,hexen\sov\*.pk3,hexen\*.pk3
+HX13,hexen.wad,Realms of Chronos,hexen\roc\*.pk3,hexen\*.pk3
