@@ -1,5 +1,4 @@
       IWad
- 
   1 - Ultimate Doom
   2 - Doom: Sigil
   3 - Doom: Sigil II
@@ -12,70 +11,81 @@
  10 - Doom 64
 
       PWad
-
- 11 - Black Rain - RottKing (2007)
+ 11 - Community Chest 3
  12 - Runaway Train - Enjay (2001)
  13 - Grove - B.P.R.D. (2004)
  14 - Formalhaut - Mechadon (2016)
  15 - Entryway - Charlie Patterson (1997)
  16 - Toxicity - Ola Bjorling (2000)
- 17 - Netherworld Citadel - NaturalTvventy (2016)
+ 17 - No End in Sight
  18 - Void and Rainbow - Serious_MOod (2017) 
- 19 - Ancient Navajo Wolf Warp - skillsaw (2016)
- 20 - Transduction - Stupidbunny, Kyka, Megamur, and dobu gabu maru (2017)
+ 19 - Ancient Aliens
+ 20 - TNT: Revilution
  21 - Miasma - tourniquet (2016)
- 22 - Dark Dome - Anders Johnsen (2001)
+ 22 - Alien Vendetta
  23 - Impossible: A New Reality - JK (2006)
  24 - Run Buddy by Michael Krause (1998)
  25 - Songs of the Damned - Iori (2006)
- 26 - Crumbling Necropolis - an_mutt (2015)
+ 26 - Nova II
  27 - Invasion 2: The Upper Decks - Andy Chen and Claude Martins (1994)
- 28 - The Beginning and the End - Tormentor667 (2007)
+ 28 - The Ultimate Torment & Torture
  29 - Magnus - Ribbiks (2013)
- 30 - Starport - z86 (2013)
- 31 - The Mouth of Madness - mouldy (2014)
- 32 - Town of the Dead - Iikka Keranen (1997)
- 33 - Ticket to Eternity - Gusta and Pipicz (2008)
+ 30 - Hellbound
+ 31 - The Mouth of Madness - Going Down
+ 32 - Requiem
+ 33 - Plutonia 2
  34 - Monster Hunter Ltd. Part 1 and Part 2 - didy (2014)
- 35 - Arcanum - James Paddock and Xaser (2018)
- 36 - Hazmat Hazama - Toooooasty (2016)
- 37 - Hobb’s End Horror - Devon West (2006)
- 38 - Undervilla - Paul Corfiatis (2009)
- 39 - Skagway - 40oz and Super Jamie (2010)
- 40 - Candlecove - skillsaw (2015) 
- 41 - Eagle’s Nest - Huy Pham (2008)
- 42 - Time Gate - Sverre Kvernmo (1996)
+ 35 - The Adventures of Square: Episode 2
+ 36 - Japanese Community Project
+ 37 - Hellcore 2.0
+ 38 - Whispers of Satan
+ 39 - UAC Ultra
+ 40 - Valiant
+ 41 - Deus Vult 2
+ 42 - Eternal Doom
  43 - Maskim Xul - Obsidian (2018)
  44 - City of the Damned: Apocalypse - Tormentor667 (2011) 
- 45 - Back to Saturn X E1: 1.1.6
+ 45 - Back to Saturn X Episode 1
  46 - Back to Saturn X Episode 2
  47 - Back to Saturn X Episode 3
  48 - Phocas Island 2 - chopkinsca (2006) 
  49 - Alpha Scorpii Monument - antares031 (2018) 
- 50 - Scythe 2. Version 2
- 51 - Warp of Time - Eternal (2009)
+ 50 - Scythe 2
+ 51 - Hell Ground
  52 - Putrefier - Ed Cripps (2012)
- 53 - Festering Wicked Helix Sectors - Joshy (2014)
+ 53 - Resurgence
  54 - Dolor - Mechadon (2017)
  55 - ZDoom Community Map Project 2 - Various (2013)
  56 - Doxylamine Moon - Lainos (2011) 
  57 - Toxin Refinery - NMN, Vader, Risen, and Nightmare (2007)
- 58 - Run From It - Erik Alm (2003) 
- 59 - Untitled - B.P.R.D. (2001) 
+ 58 - Scythe 
+ 59 - Equinox 
  60 - The Given - dobu gabu maru (2017)
- 61 - < | > - Gusta (2005)
- 62 - God Machine - Ribbiks and Dannebubinga (2015)
- 63 - 1010011010 - darkwave0000 (2010)
+ 61 - Kama Sutra
+ 62 - Sunlust
+ 63 - Speed of Doom
  64 - Phylex: Top Floor - Scuba Steve et al (2008) 
- 65 - Blizzard Conditions - Pyroscourge (2012)
- 66 - Interstellar Sickness and Shaman’s Device - lupinx-Kassman (2012)
- 67 - Pale Monument - Insane_Gazebo (2009)
+ 65 - Winter’s Fury
+ 66 - Community Chest 4
+ 67 - Sunder
  68 - Thunderpeak Powerplant and Termination - Vader (2008)
- 69 - The Mucus Flow - B.P.R.D. (2004)
+ 69 - Community Chest 2
  70 - DOOM II: Hellscape
+ 71 - Remnant
+ 72 - Foursite
+ 73 - Firetop Mountain
+ 74 - Lost Civilization
+ 75 - MMDCXIV - Journey Into 27 Century
+ 76 - The Community Chest Project
+ 77 - Dawn of Reality
+ 78 - Scythe X. Episodes 1-2
+ 79 - A.L.T
+ 80 - Zaero: Episode 1
+ 81 - The Inquisitor III
+ 82 - ESP
+ 83 - The Warlock's Hearth
 
       Heretic
-
  H1 - Shadow of the Serpent Riders
  H2 - Faithless
  H3 - Wayfarer
@@ -90,7 +100,6 @@ H11 - Blasphemous Experiments
 H12 - Master of Chaos
 
       Hexen
-
 HX1 - Beyond Heretic
 HX2 - Deathking of the Citadel
 HX3 - Shadows of Chronos
@@ -106,6 +115,5 @@ HX12 - Scourge of Viscerus
 HX13 - Realms of Cronos
 
       Wolfenstein 3D
-
 W1 - Wolfenstein 3D
 w2 - Brutal Wolfenstein

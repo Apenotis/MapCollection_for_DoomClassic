@@ -1,8 +1,8 @@
 ID,Iwad,Mapname,pwad,parameter
-1,doom.wad,Ultimate Doom
+1,doom.wad,Ultimate Doom,Doom\Texture
 2,doom.wad,Sigil,sigil.wad
 3,doom.wad,Sigil 2,sigil2.wad
-4,doom2.wad,Doom II: Hell on Earth
+4,doom2.wad,Doom II: Hell on Earth,Doom\Texture
 5,masterlevels.wad,Doom II: Masterlevels
 6,nerve.wad,Doom II: No Rest for the Living
 7,doom2.wad,Doom II: Legacy of Rust,ID1
@@ -70,33 +70,46 @@ ID,Iwad,Mapname,pwad,parameter
 68,doom2.wad,Thunderpeak,Thunderpeak
 69,doom2.wad,Community Chest 2,Cchest2
 70,doom2.wad,DOOM II: Hellscape,Hellscape -warp 21
+71,doom2.wad,Remnant,Remnant,1
+72,doom2.wad,Foursite,Foursite
+73,doom2.wad,Firetop Mountain,Firetop
+74,doom2.wad,Lost Civilization,Lost
+75,doom2.wad,MMDCXIV - Journey Into 27 Century,MMDCXIV
+76,doom2.wad,The Community Chest Project,Cchest1
+77,doom2.wad,Dawn of Reality,Dor
+78,Doom2.wad,Scythe X. Episodes 1-2,Scythe-X
+79,Doom2.wad,A.L.T,Alt
+80,Doom2.wad,Zaero: Episode 1,Zaero
+81,doom2.wad,The Inquisitor III,Inquisitor,1
+82,doom2.wad,ESP,Esp
+83,doom2.wad,The Warlock's Hearth,Warlock
 
-w1,doom2.wad,Wolfenstein 3D,Wolfenstein -config Wolfenstein
+w1,doom2.wad,Wolfenstein 3D,Wolfenstein,1 -config Wolfenstein
 w2,doom2.wad,Wolfenstein 3D
 
-H1,heretic.wad,Heretic,heretic\*.pk3
-H2,heretic.wad,Call of the Apostate,heretic\call_of_the_Apostate\*.wad,heretic\*.pk3
-H3,heretic.wad,Faithless,heretic\Faithless\*.pk3
-H4,heretic.wad,Wayfarer,heretic\Wayfarer\*.wad,heretic\*.pk3
-H5,heretic.wad,Sold Soul,heretic\Soldsoul\*.wad,heretic\Soldsoul\*.pk3,heretic\*.pk3
-H6,heretic.wad,Quest for the Crystal Skulls,heretic\qftcs\*.wad,heretic\*.pk3
-H7,heretic.wad,Dungeons and monsters,heretic\dam\*.wad,heretic\*.pk3
-H8,heretic.wad,HYMN: A Heretic Community Project,heretic\hymn\*.wad,heretic\*.pk3
-H9,heretic.wad,Sitnalta,heretic\sitnalta\*.pk3,heretic\*.pk3
-H10,heretic.wad,Treasure Chest,heretic\htchest\*.wad,heretic\*.pk3
-H11,heretic.wad,Blasphemous Experiments,heretic\be\*.wad,heretic\be\*.hhe,heretic\*.pk3
-H12,heretic.wad,Master of Chaos,heretic\moc\*.wad,heretic\*.pk3
+H1,heretic.wad,Heretic,heretic
+H2,heretic.wad,Call of the Apostate,heretic\call_of_the_Apostate,heretic
+H3,heretic.wad,Faithless,heretic\Faithless
+H4,heretic.wad,Wayfarer,heretic\Wayfarer,heretic
+H5,heretic.wad,Sold Soul,heretic\Soldsoul,heretic\Soldsoul,heretic
+H6,heretic.wad,Quest for the Crystal Skulls,heretic\qftcs,heretic
+H7,heretic.wad,Dungeons and monsters,heretic\dam,heretic
+H8,heretic.wad,HYMN: A Heretic Community Project,heretic\hymn,heretic
+H9,heretic.wad,Sitnalta,heretic\sitnalta,heretic
+H10,heretic.wad,Treasure Chest,heretic\htchest,heretic
+H11,heretic.wad,Blasphemous Experiments,heretic\be,heretic\be,heretic
+H12,heretic.wad,Master of Chaos,heretic\moc,heretic
 
-HX1,hexen.wad,Hexen,hexen\*.pk3
-HX2,hexen.wad,Hexen Deathkings,hexdd.wad,hexen\*.pk3
-HX3,hexen.wad,Shadow of Chronos,hexen\shadow_of_chronos\*.wad,hexen\*.pk3
-HX4,hexen.wad,Cyrgoth's Revenge,hexen\Cyrgoth's_Revenge\*.wad,hexen\*.pk3
-HX5,hexen.wad,Afterlands,hexen\afterlands\*.wad,hexen\*.pk3
-HX6,hexen.wad,4 Weeks of Pain,hexen\4weeks\*.pk3,hexen\*.pk3
-HX7,hexen.wad,Penumbra,hexen\penumbra\*.wad,hexen\*.pk3
-HX8,hexen.wad,Tower of Chaos,hexen\toc\*.pk3,hexen\*.pk3
-HX9,hexen.wad,A new World,hexen\anworld\*.pk3,hexen\*.pk3
-HX10,hexen.wad,Descent Into the Abyss,hexen\dita\*.pk3,hexen\*.pk3
-HX11,hexen.wad,Shade of Darkness,hexen\sod\*.pk3,hexen\sod\*.wad,hexen\*.pk3
-HX12,hexen.wad,Scourge of Viscerus,hexen\sov\*.pk3,hexen\*.pk3
-HX13,hexen.wad,Realms of Chronos,hexen\roc\*.pk3,hexen\*.pk3
+HX1,hexen.wad,Hexen,hexen
+HX2,hexen.wad,Hexen Deathkings,hexdd.wad,hexen
+HX3,hexen.wad,Shadow of Chronos,hexen\shadow_of_chronos,hexen
+HX4,hexen.wad,Cyrgoth's Revenge,hexen\Cyrgoth's_Revenge,hexen
+HX5,hexen.wad,Afterlands,hexen\afterlands,hexen
+HX6,hexen.wad,4 Weeks of Pain,hexen\4weeks,hexen
+HX7,hexen.wad,Penumbra,hexen\penumbra,hexen
+HX8,hexen.wad,Tower of Chaos,hexen\toc,hexen
+HX9,hexen.wad,A new World,hexen\anworld,hexen
+HX10,hexen.wad,Descent Into the Abyss,hexen\dita,hexen
+HX11,hexen.wad,Shade of Darkness,hexen\sod,hexen\sod,hexen
+HX12,hexen.wad,Scourge of Viscerus,hexen\sov,hexen
+HX13,hexen.wad,Realms of Chronos,hexen\roc,hexen

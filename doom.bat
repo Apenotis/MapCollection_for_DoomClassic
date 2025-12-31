@@ -9,14 +9,13 @@ set "PWAD_DIR=%~dp0pwad"
 SET "UZ=UzDoom\uzdoom.exe"
 SET "PB=Mods\BrutalProject\*.pk3"
 SET "Black=Mods\BrutalBlack\*.pk3"
-SET "Hexen=Mods\BrutalHexen\*.pk3"
-SET "Heretic=Mods\BrutalHeretic\*.pk3"
-SET "Wolf3D=Mods\BrutalWolfenstein\*.pk3"
+SET "Hexen=Mods\BrutalHexen\*.pk3 Mods\BrutalHexen\HEXEN_NZ_OPTIONS.ini" https://nzdoom.net/showthread.php?tid=2
+SET "Heretic=Mods\BrutalHeretic\*.pk3 Mods\BrutalHeretic\HERETIC_NZ_OPTIONS.ini" https://nzdoom.net/showthread.php?tid=3
+SET "Wolf3D=Mods\BrutalWolfenstein\*.pk3" https://www.moddb.com/mods/brutal-wolfenstein-3d
 SET "Voxel=Mods\cheello_voxels.zip"
 
 :map_selection
-REM Fensterbreite auf 235 Zeichen optimiert
-mode con: cols=235 lines=50
+mode con: cols=233 lines=48
 
 for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1) do rem"') do set "ESC=%%b"
 set "C_Cyan=!ESC![36m"
@@ -28,12 +27,11 @@ set "C_Reset=!ESC![0m"
 
 CLS
 echo.
-echo  %C_Cyan%============================================================================================================================================================================================================================
-echo      I W A D S (1-10)                   ^|   P W A D S (11-40)                                                         ^|   P W A D S (41-70)                                               ^|   H E R E T I C / H E X E N
-echo  ============================================================================================================================================================================================================================%C_Reset%
+echo  %C_Cyan%=======================================================================================================================================================================================================================================
+echo      I W A D S (1-10)                        ^|   P W A D S (11-40)                                                    ^|   P W A D S (41-70)                                                    ^|   H E R E T I C / H E X E N
+echo  =======================================================================================================================================================================================================================================%C_Reset%
 echo.
 
-REM Arrays leeren
 for /L %%i in (1,1,120) do (set "col1[%%i]=" & set "col2[%%i]=" & set "col3[%%i]=" & set "col4[%%i]=")
 set "currentCol=0"
 set "idx1=0" & set "idx2=0" & set "idx3=0" & set "idx4=0"
@@ -45,25 +43,47 @@ if not exist "Maps.txt" (
     goto :eof
 )
 
-for /f "usebackq tokens=*" %%l in ("Maps.txt") do (
+set "idx1=0" & set "idx2=0" & set "idx3=0" & set "idx4=0" & set "tempIdx=0" & set "maxIdx=0" & set "currentCol=0"
+
+for /f "usebackq delims=" %%l in (`findstr /n "^" "Maps.txt"`) do (
     set "line=%%l"
+    set "line=!line:*:=!"
     set "isHeader=0"
     set "cleanLine=!line: =!"
+    
     if /i "!cleanLine!"=="IWad" (set "currentCol=1" & set "isHeader=1")
     if /i "!cleanLine!"=="PWad" (set "currentCol=2" & set "isHeader=1")
     if /i "!cleanLine!"=="Heretic" (set "currentCol=4" & set "isHeader=1")
     if /i "!cleanLine!"=="Hexen" (set "currentCol=4" & set "isHeader=1")
     if /i "!cleanLine!"=="Wolfenstein3D" (set "currentCol=4" & set "isHeader=1")
 
-    if "!isHeader!"=="0" if not "!line!"=="" (
-        if "!currentCol!"=="1" (set /a idx1+=1 & set "col1[!idx1!]=!line!")
-        if "!currentCol!"=="2" (
-            for /f "tokens=1" %%n in ("!line!") do set "firstToken=%%n"
-            set "isHigh=0"
-            if !firstToken! GEQ 41 set "isHigh=1"
-            if "!isHigh!"=="1" (set /a idx3+=1 & set "col3[!idx3!]=!line!") else (set /a idx2+=1 & set "col2[!idx2!]=!line!")
+    if "!isHeader!"=="0" (
+        if "!currentCol!"=="1" (
+            if not "!line!"=="" (set /a idx1+=1 & set "col1[!idx1!]=!line!")
         )
-        if "!currentCol!"=="4" (set /a idx4+=1 & set "col4[!idx4!]=!line!")
+        if "!currentCol!"=="2" (
+            if not "!line!"=="" (
+                set /a tempIdx+=1
+                set "tempPWAD[!tempIdx!]=!line!"
+            )
+        )
+        if "!currentCol!"=="4" (
+            set /a idx4+=1
+            if "!line!"=="" (set "col4[!idx4!]= ") else (set "col4[!idx4!]=!line!")
+        )
+    )
+)
+
+if !tempIdx! GTR 0 (
+    set /a "halfTemp=(tempIdx + 1) / 2"
+    for /L %%i in (1,1,!tempIdx!) do (
+        if %%i LEQ !halfTemp! (
+            set /a idx2+=1
+            set "col2[!idx2!]=!tempPWAD[%%i]!"
+        ) else (
+            set /a idx3+=1
+            set "col3[!idx3!]=!tempPWAD[%%i]!"
+        )
     )
 )
 
@@ -77,11 +97,11 @@ for /L %%i in (1,1,!maxIdx!) do (
     set "c2=!col2[%%i]!                                                                                "
     set "c3=!col3[%%i]!                                                                                "
     set "c4=!col4[%%i]!"
-    echo   %C_Green%!c1:~0,38! %C_Gray%^|%C_Green% !c2:~0,67! %C_Gray%^|%C_Green% !c3:~0,67! %C_Gray%^|%C_Green% !c4!%C_Reset%
+    echo   %C_Green%!c1:~0,42! %C_Gray%^|%C_Green% !c2:~0,70! %C_Gray%^|%C_Green% !c3:~0,70! %C_Gray%^|%C_Green% !c4!%C_Reset%
 )
 
 echo.
-echo  %C_Cyan%============================================================================================================================================================================================================================%C_Reset%
+echo  %C_Cyan%=======================================================================================================================================================================================================================================%C_Reset%
 echo   %C_Yellow%[0] Beenden    [R] Reset/Neu laden%C_Reset%
 echo.
 set /p "M=%C_Yellow%  Gib die ID ein: %C_Reset%"
@@ -89,7 +109,6 @@ set /p "M=%C_Yellow%  Gib die ID ein: %C_Reset%"
 if /i "%M%"=="0" exit
 if /i "%M%"=="r" goto map_selection
 
-REM --- Ab hier folgt die CSV-Verarbeitung ---
 set "found=0"
 for /f "usebackq skip=1 tokens=1,* delims=," %%a in ("maps.csv") do (
     if /i "%%a"=="%M%" (
@@ -144,7 +163,7 @@ for %%p in (!remaining!) do (
 
         if defined targetPath (
             if exist "!targetPath!\" (
-                for %%f in ("!targetPath!\*.wad" "!targetPath!\*.pk3" "!targetPath!\*.deh" "!targetPath!\*.pk7" "!targetPath!\*.SF2" "!targetPath!\*.lev" "!targetPath!\*.res" "!targetPath!\*.def" "!targetPath!\*.bex" "!targetPath!\*.ipk3") do (
+                for %%f in ("!targetPath!\*.wad" "!targetPath!\*.pk3" "!targetPath!\*.deh" "!targetPath!\*.pk7" "!targetPath!\*.SF2" "!targetPath!\*.lev" "!targetPath!\*.res" "!targetPath!\*.def" "!targetPath!\*.bex" "!targetPath!\*.ipk3" "!targetPath!\*.hhe") do (
                     set "fileParams=!fileParams! "%%~f""
                     set "displayFileParams=!displayFileParams! %%~nxf"
                 )
@@ -170,7 +189,7 @@ if "!modFlag!"=="1" (
 )
 
 :mod_menu
-mode con: cols=100 lines=30
+mode con: cols=56 lines=17
 COLOR A & CLS
 echo.
 echo  ======================================================
@@ -178,7 +197,7 @@ echo          SPIEL :  %displayCore%
 echo          KARTE :  %mapname%
 echo  ======================================================
 echo.
-echo                    WAEHLE DEINEN MOD
+echo                    WAÄLE DEINE MOD
 echo  ------------------------------------------------------
 
 set "validChoices="
@@ -215,7 +234,6 @@ if /i "!core!"=="doom.wad" (
 echo.
 set /P "modChoice=  DEINE WAHL: "
 
-REM Überprüfung der Eingabe
 set "checkChoice=0"
 for %%c in (%validChoices%) do (
     if "%modChoice%"=="%%c" set "checkChoice=1"
@@ -223,12 +241,13 @@ for %%c in (%validChoices%) do (
 
 if "%checkChoice%"=="0" (
     echo.
-    echo  Ungueltige Auswahl! Bitte erneut waehlen.
+    echo  Ungültige Auswahl! Bitte erneut wählen.
     timeout /t 2 >nul
     goto mod_menu
 )
 
 :summary_section
+mode con: cols=56 lines=17
 CLS & COLOR 0B
 echo  ======================================================
 echo          U Z D O O M   S T A R T - B E R E I T
@@ -249,6 +268,7 @@ if "%modChoice%"=="8" set "currentModName=Brutal Wolfenstein"
 echo    MOD   :  !currentModName!
 echo    PARAM : !extraParams!
 echo  ======================================================
+echo.
 timeout /t 2 >nul
 
 REM --- START ENGINE ---
@@ -271,6 +291,14 @@ if "%modChoice%"=="1" (
 )
 
 set "mapname=" & set "core=" & set "iwadPath=" & set "fileParams=" & set "displayFileParams=" & set "displayCore=" & set "modFlag=" & set "validChoices="
+
+for /L %%i in (1,1,200) do (
+    set "col1[%%i]="
+    set "col2[%%i]="
+    set "col3[%%i]="
+    set "col4[%%i]="
+    set "tempPWAD[%%i]="
+)
 
 pause
 goto map_selection
