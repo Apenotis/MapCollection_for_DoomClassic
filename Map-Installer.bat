@@ -5,7 +5,7 @@ chcp 65001 >nul
 for /f "tokens=*" %%a in ('powershell -command "[console]::Out.Write('')"') do (set "dummy=%%a")
 reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1 /f >nul 2>&1
 for /f %%a in ('echo prompt $E ^| cmd') do set "ESC=%%a"
-set "G=%ESC%[92m" & set "Y=%ESC%[93m" & set "B=%ESC%[94m" & set "W=%ESC%[0m"
+set "G=%ESC%[92m" & set "Y=%ESC%[93m" & set "B=%ESC%[94m" & set "R=%ESC%[91m" & set "W=%ESC%[0m"
 
 set "INSTALL_DIR=Install"
 set "PWAD_BASE=pwad"
@@ -17,7 +17,7 @@ set /a count_installed=0
 
 cls
 echo %B%======================================================%W%
-echo %B%       DOOM AUTOMATIC INSTALLER - ULTIMATE v6.6%W%
+echo %B%                 DOOM MAP INSTALLER%W%
 echo %B%======================================================%W%
 echo.
 
@@ -42,108 +42,96 @@ for %%Z in ("%INSTALL_DIR%\*.zip" "%INSTALL_DIR%\*.7z" "%INSTALL_DIR%\*.rar") do
 
 for /d %%D in ("%INSTALL_DIR%\*") do (
     set "bestFile="
-    set "folderName=%%~nD"
-    if exist "%%~fD\!folderName!.txt" (
-        set "bestFile=%%~fD\!folderName!.txt"
-    ) else (
-        for %%F in ("%%~fD\*.txt") do (
-            findstr /i "Title" "%%~fF" >nul 2>&1
-            if !errorlevel! equ 0 (
-                set "fname=%%~nxF"
-                echo !fname! | findstr /i "credits license legal version" >nul
-                if !errorlevel! neq 0 set "bestFile=%%~fF"
-            )
-        )
+    for %%F in ("%%~fD\*.txt") do (
+        set "fn=%%~nxF"
+        echo !fn! | findstr /i "credits license legal version" >nul
+        if errorlevel 1 if not defined bestFile set "bestFile=%%~fF"
     )
     if defined bestFile (
-        call :process_package "%%~fD" "!bestFile!"
+        call :process "%%~fD" "!bestFile!"
         rd /s /q "%%~fD"
     )
 )
 
 for %%F in ("%INSTALL_DIR%\*.txt") do (
-    set "fname=%%~nxF"
-    echo !fname! | findstr /i "credits license" >nul
-    if !errorlevel! neq 0 call :process_package "%INSTALL_DIR%" "%%~fF"
+    set "fn=%%~nxF"
+    echo !fn! | findstr /i "credits license" >nul
+    if errorlevel 1 call :process "%INSTALL_DIR%" "%%~fF"
 )
 
 echo.
 echo %B%======================================================%W%
 echo %B%                INSTALLATIONS-BERICHT%W%
 echo %B%======================================================%W%
-echo  Archive entpackt : %Y%!count_zip!%W%
-echo  Mods installiert : %G%!count_installed!%W%
+echo  Archive verarbeitet : %Y%!count_zip!%W%
+echo  Mods installiert    : %G%!count_installed!%W%
+echo.
+echo  Status: %G%Alle Datenbanken aktualisiert!%W%
 echo %B%======================================================%W%
 pause
 exit /b
 
-:process_package
-set "srcDir=%~1"
-set "infoFile=%~2"
+:process
+set "src=%~1"
+set "txt=%~2"
 set "m_name="
-set "name_stem="
+set "m_fold="
+set "base=%~n2"
 
-echo %B%[ SCAN ]%W% Analysiere: %Y%%~nx2%W%
+echo %B%[ SCAN ]%W% Analysiere: %Y%!base!.txt%W%
 
-for /f "usebackq tokens=*" %%A in (`powershell -command "$t = Get-Content '%infoFile%' | Select-String 'Title\s*:' | Select-Object -First 1; if($t){ $t.ToString().Split(':',2)[1].Trim() }"`) do set "m_name=%%A"
-for /f "usebackq tokens=*" %%A in (`powershell -command "$f = Get-Content '%infoFile%' | Select-String 'Filename\s*:' | Select-Object -First 1; if($f){ $f.ToString().Split(':',2)[1].Trim() }"`) do set "name_stem=%%A"
+for /f "usebackq tokens=*" %%A in (`powershell -command "$line = (Get-Content '%txt%' | Select-String 'Title\s*:' | Select-Object -First 1); if($line){ $val = $line.ToString().Split(':',2)[1].Trim(); (Get-Culture).TextInfo.ToTitleCase($val.ToLower()) } else { '!base!' }"`) do set "m_name=%%A"
+if "!m_name!"=="" set "m_name=!base!"
 
-if not defined m_name set "m_name=%~n2"
-if not defined name_stem set "name_stem=%~n2"
-set "name_stem=!name_stem:.wad=!"
-set "name_stem=!name_stem:.pk3=!"
-
-for /f "usebackq tokens=*" %%C in (`powershell -command "(Get-Culture).TextInfo.ToTitleCase('!m_name!'.ToLower())"`) do set "m_name=%%C"
-
-for /f "tokens=1" %%a in ("!m_name!") do set "m_folder=%%a"
-set "m_folder=!m_folder:.=!" & set "m_folder=!m_folder::=!"
-
-REM ID-Berechnung
-set "highest=0"
-for /f "tokens=1 delims=," %%I in ('type "%CSV_FILE%"') do (
-    set /a "num=%%I" 2>nul
-    if !num! GTR !highest! set "highest=!num!"
-)
-set /a "new_id=highest + 1"
+for /f "usebackq tokens=*" %%A in (`powershell -command "$f = '!m_name!'.Split(' ')[0]; $f = $f -replace '[^a-zA-Z0-9]', ''; if($f.Length -lt 2){ '!base!' } else { $f }"`) do set "m_fold=%%A"
 
 echo   %G%^>%W% Titel : %Y%!m_name!%W%
-echo   %G%^>%W% ID    : !new_id!
-echo   %G%^>%W% Pfad  : %B%!m_folder!\%W%
+echo   %G%^>%W% ID    : !id! (Berechne...)
+echo   %G%^>%W% Pfad  : %B%!m_fold!\%W%
 
-set "targetPath=%PWAD_BASE%\!m_folder!"
-if not exist "!targetPath!" mkdir "!targetPath!"
+set "targetPath=%PWAD_BASE%\!m_fold!"
+if not exist "!targetPath!" mkdir "!targetPath!" 2>nul
 
-set "bC=0" & set "cD=0"
+set "id=0"
+for /f "tokens=1 delims=," %%I in ('type "%CSV_FILE%"') do (
+    set /a "val=%%I" 2>nul
+    if !val! GTR !id! set "id=!val!"
+)
+set /a id+=1
+
+set "blankCount=0"
 (for /f "tokens=1* delims=:" %%A in ('findstr /n "^" "%CSV_FILE%"') do (
-    set "ln=%%B"
-    if "!ln!"=="" (
-        set /a bC+=1
-        if !bC!==2 if !cD!==0 (echo !new_id!,doom2.wad,!m_name!,0,!m_folder!\& set "cD=1")
+    set "line=%%B"
+    if "!line!"=="" (
+        set /a blankCount+=1
+        if !blankCount!==2 (echo !id!,doom2.wad,!m_name!,0,!m_fold!\)
         echo.
-    ) else (echo(!ln!)
-)) > csv.tmp
-move /y csv.tmp "%CSV_FILE%" >nul
+    ) else (echo(!line!)
+)) > temp.csv
+move /y temp.csv "%CSV_FILE%" >nul
 
-set "iP=0" & set "tD=0"
+set "isP=0"
 (for /f "tokens=1* delims=:" %%A in ('findstr /n "^" "%TXT_FILE%"') do (
-    set "ln=%%B"
-    if "!ln!"=="" (
-        if !iP!==1 if !tD!==0 (echo !new_id! - !m_name!& set "tD=1")
+    set "line=%%B"
+    if "!line!"=="" (
+        if !isP!==1 (echo !id! - !m_name!& set "isP=0")
         echo.
     ) else (
-        echo(!ln!
-        set "cl=!ln: =!"
-        if /i "!cl!"=="PWad" set "iP=1"
+        echo(!line!
+        set "check=!line: =!"
+        if /i "!check!"=="PWad" set "isP=1"
     )
-)) > txt.tmp
-move /y txt.tmp "%TXT_FILE%" >nul
+)) > temp.txt
+move /y temp.txt "%TXT_FILE%" >nul
 
-if exist "%srcDir%\!name_stem!*.*" move /y "%srcDir%\!name_stem!*.*" "!targetPath!\" >nul 2>&1
-for %%E in (wad pk3 deh bex txt) do (
-    if exist "%srcDir%\*.%%E" move /y "%srcDir%\*.%%E" "!targetPath!\" >nul 2>&1
-)
+set "m_stem="
+for /f "usebackq tokens=*" %%A in (`powershell -command "$line = (Get-Content '%txt%' | Select-String 'Filename\s*:' | Select-Object -First 1); if($line){ $line.ToString().Split(':',2)[1].Trim().Replace('.wad','').Replace('.WAD','').Trim() } else { '!base!' }"`) do set "m_stem=%%A"
+
+REM VERSCHIEBEN
+if exist "%src%\!m_stem!*.*" move /y "%src%\!m_stem!*.*" "!targetPath!\" >nul 2>&1
+for %%E in (wad pk3 deh bex txt) do if exist "%src%\*.%%E" move /y "%src%\*.%%E" "!targetPath!\" >nul 2>&1
 
 set /a count_installed+=1
-echo %G%[ OK ]%W% Abgeschlossen.
+echo %G%[ OK ]%W% Mod erfolgreich registriert.
 echo %B%------------------------------------------------------%W%
 exit /b
