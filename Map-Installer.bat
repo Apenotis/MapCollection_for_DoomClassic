@@ -17,7 +17,7 @@ set /a count_installed=0
 
 cls
 echo %B%======================================================%W%
-echo %B%                 DOOM MAP INSTALLER%W%
+echo %B%       DOOM AUTOMATIC INSTALLER - IWAD v7.4%W%
 echo %B%======================================================%W%
 echo.
 
@@ -28,16 +28,11 @@ for %%Z in ("%INSTALL_DIR%\*.zip" "%INSTALL_DIR%\*.7z" "%INSTALL_DIR%\*.rar") do
     echo %Y%[ ARCHIV ]%W% %%~nxZ
     set "targetZipDir=%INSTALL_DIR%\%%~nZ"
     if not exist "!targetZipDir!" mkdir "!targetZipDir!"
-    
-    echo %B%  - Entpacke Daten...%W%
-    if /i "%%~xZ"==".zip" (
-        tar -xf "%%Z" -C "!targetZipDir!" >nul 2>&1
-    ) else (
+    if /i "%%~xZ"==".zip" ( tar -xf "%%Z" -C "!targetZipDir!" >nul 2>&1 ) else (
         powershell -command "$shell = New-Object -ComObject Shell.Application; $zip = $shell.NameSpace('%%~fZ'); $dest = $shell.NameSpace((Get-Item '!targetZipDir!').FullName); $dest.CopyHere($zip.Items(), 0x14)" >nul 2>&1
     )
     del "%%Z"
-    echo %G%  - Fertig.%W%
-    echo %B%------------------------------------------------------%W%
+    echo %G%  - Entpackt.%W%
 )
 
 for /d %%D in ("%INSTALL_DIR%\*") do (
@@ -59,14 +54,13 @@ for %%F in ("%INSTALL_DIR%\*.txt") do (
     if errorlevel 1 call :process "%INSTALL_DIR%" "%%~fF"
 )
 
+REM --- ABSCHLUSS-BERICHT ---
 echo.
 echo %B%======================================================%W%
 echo %B%                INSTALLATIONS-BERICHT%W%
 echo %B%======================================================%W%
 echo  Archive verarbeitet : %Y%!count_zip!%W%
 echo  Mods installiert    : %G%!count_installed!%W%
-echo.
-echo  Status: %G%Alle Datenbanken aktualisiert!%W%
 echo %B%======================================================%W%
 pause
 exit /b
@@ -76,17 +70,25 @@ set "src=%~1"
 set "txt=%~2"
 set "m_name="
 set "m_fold="
+set "m_iwad=doom2.wad"
 set "base=%~n2"
 
 echo %B%[ SCAN ]%W% Analysiere: %Y%!base!.txt%W%
 
-for /f "usebackq tokens=*" %%A in (`powershell -command "$line = (Get-Content '%txt%' | Select-String 'Title\s*:' | Select-Object -First 1); if($line){ $val = $line.ToString().Split(':',2)[1].Trim(); (Get-Culture).TextInfo.ToTitleCase($val.ToLower()) } else { '!base!' }"`) do set "m_name=%%A"
+for /f "usebackq tokens=*" %%A in (`powershell -command "$c = Get-Content '%txt%'; $line = $c | Select-String 'Title\s*:' | Select-Object -First 1; if($line){ $val = $line.ToString().Split(':',2)[1].Trim(); (Get-Culture).TextInfo.ToTitleCase($val.ToLower()) } else { '!base!' }"`) do set "m_name=%%A"
 if "!m_name!"=="" set "m_name=!base!"
+
+powershell -command "$c = Get-Content '%txt%' | Out-String; if($c -match 'Ultimate|Doom1|Doom.wad'){ exit 1 } elseif($c -match 'Plutonia'){ exit 2 } elseif($c -match 'TNT|Evilution'){ exit 3 } else { exit 0 }"
+set "iwad_check=%errorlevel%"
+
+if %iwad_check%==1 set "m_iwad=doom.wad"
+if %iwad_check%==2 set "m_iwad=plutonia.wad"
+if %iwad_check%==3 set "m_iwad=tnt.wad"
 
 for /f "usebackq tokens=*" %%A in (`powershell -command "$f = '!m_name!'.Split(' ')[0]; $f = $f -replace '[^a-zA-Z0-9]', ''; if($f.Length -lt 2){ '!base!' } else { $f }"`) do set "m_fold=%%A"
 
 echo   %G%^>%W% Titel : %Y%!m_name!%W%
-echo   %G%^>%W% ID    : !id! (Berechne...)
+echo   %G%^>%W% IWAD  : %Y%!m_iwad!%W%
 echo   %G%^>%W% Pfad  : %B%!m_fold!\%W%
 
 set "targetPath=%PWAD_BASE%\!m_fold!"
@@ -104,7 +106,7 @@ set "blankCount=0"
     set "line=%%B"
     if "!line!"=="" (
         set /a blankCount+=1
-        if !blankCount!==2 (echo !id!,doom2.wad,!m_name!,0,!m_fold!\)
+        if !blankCount!==2 (echo !id!,!m_iwad!,!m_name!,0,!m_fold!\)
         echo.
     ) else (echo(!line!)
 )) > temp.csv
@@ -127,11 +129,10 @@ move /y temp.txt "%TXT_FILE%" >nul
 set "m_stem="
 for /f "usebackq tokens=*" %%A in (`powershell -command "$line = (Get-Content '%txt%' | Select-String 'Filename\s*:' | Select-Object -First 1); if($line){ $line.ToString().Split(':',2)[1].Trim().Replace('.wad','').Replace('.WAD','').Trim() } else { '!base!' }"`) do set "m_stem=%%A"
 
-REM VERSCHIEBEN
 if exist "%src%\!m_stem!*.*" move /y "%src%\!m_stem!*.*" "!targetPath!\" >nul 2>&1
 for %%E in (wad pk3 deh bex txt) do if exist "%src%\*.%%E" move /y "%src%\*.%%E" "!targetPath!\" >nul 2>&1
 
 set /a count_installed+=1
-echo %G%[ OK ]%W% Mod erfolgreich registriert.
+echo %G%[ OK ]%W% Registriert mit !m_iwad!
 echo %B%------------------------------------------------------%W%
 exit /b
