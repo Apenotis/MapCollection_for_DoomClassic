@@ -17,7 +17,7 @@ set /a count_installed=0
 
 cls
 echo %B%======================================================%W%
-echo %B%       DOOM AUTOMATIC INSTALLER - AUTO-CAPS v6.4%W%
+echo %B%                  DOOM Map Installer%W%
 echo %B%======================================================%W%
 echo.
 
