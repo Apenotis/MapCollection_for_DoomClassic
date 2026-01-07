@@ -13,11 +13,6 @@ Hexen Addon 		https://www.gog.com/de/game/hexen_deathkings_of_the_dark_citadel
 Heretic			https://www.gog.com/de/game/heretic_shadow_of_the_serpent_riders
 Final Doom
 
-----
-
-Pwad - https://www.mediafire.com/file/jd1wukxbssbm0p0/Doom.7z/file
-
-
 Im Ordner Engine kommt GzDoom installiert 
 Im Ordner Maps / Iwad kommen eure .wad File von Doomn Doom2 und die Optionalen
 Im Pwad Ordner kommen all eure Karten rein die alle selbst sich in einem Ordner befinden. Die Ordner Struktur muss beibehalten werden damit es Funktioiniert.
