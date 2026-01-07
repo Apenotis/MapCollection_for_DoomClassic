@@ -6,7 +6,6 @@ REM --- ANSI FARB-FIX ---
 for /f "tokens=*" %%a in ('powershell -command "[console]::Out.Write('')"') do (set "dummy=%%a")
 reg add HKCU\Console /v VirtualTerminalLevel /t REG_DWORD /d 1 /f >nul 2>&1
 for /f %%a in ('echo prompt $E ^| cmd') do set "ESC=%%a"
-
 set "G=%ESC%[92m" & set "Y=%ESC%[93m" & set "B=%ESC%[94m" & set "R=%ESC%[91m" & set "W=%ESC%[0m"
 
 set "INSTALL_DIR=Install"
@@ -19,33 +18,40 @@ set /a count_success=0
 
 cls
 echo %B%======================================================%W%
-echo %B%       DOOM AUTOMATIC INSTALLER - FULL OVERVIEW%W%
+echo %B%       DOOM AUTOMATIC INSTALLER - MULTI-ARCHIVE%W%
 echo %B%======================================================%W%
 echo.
 
 if not exist "%INSTALL_DIR%" mkdir "%INSTALL_DIR%"
 
-REM --- 1. ZIP DATEIEN ENTPACKEN ---
-for %%Z in ("%INSTALL_DIR%\*.zip") do (
+for %%A in ("%INSTALL_DIR%\*.zip" "%INSTALL_DIR%\*.7z" "%INSTALL_DIR%\*.rar") do (
     set /a count_total+=1
-    echo %Y%[ ARCHIV ]%W% Gefunden: %%~nxZ
+    echo %Y%[ ARCHIV ]%W% Gefunden: %%~nxA
     
-    set "zipName=%%~nZ"
-    set "tempFolder=%INSTALL_DIR%\!zipName!"
+    set "tempFolder=%INSTALL_DIR%\%%~nA"
     if not exist "!tempFolder!" mkdir "!tempFolder!"
     
-    echo %B%  - Entpacke Daten...%W%
-    tar -xf "%%Z" -C "!tempFolder!"
-    if !errorlevel! equ 0 (
-        echo %G%  - Erfolg! Archiv gelöscht.%W%
-        del "%%Z"
+    echo %B%  - Entpacke Daten via PowerShell...%W%
+    
+    powershell -command "$shell = New-Object -ComObject Shell.Application; $zip = $shell.NameSpace('%%~fA'); $dest = $shell.NameSpace((Get-Item '!tempFolder!').FullName); $dest.CopyHere($zip.Items(), 0x14)" >nul 2>&1
+
+    if not exist "!tempFolder!\*.txt" if not exist "!tempFolder!\*.wad" (
+        if /i "%%~xA"==".zip" tar -xf "%%A" -C "!tempFolder!" >nul 2>&1
+    )
+
+    REM Prüfung: Wurde etwas entpackt?
+    set "check="
+    for /f %%F in ('dir /b "!tempFolder!" 2^>nul') do set "check=1"
+    
+    if defined check (
+        echo %G%  - Erfolg! Archiv entfernt.%W%
+        del "%%A"
     ) else (
-        echo %R%  - FEHLER beim Entpacken.%W%
+        echo %R%  - FEHLER: Entpacken fehlgeschlagen .7z/.rar benötigen ggf. installierte Handler.%W%
     )
     echo %B%------------------------------------------------------%W%
 )
 
-REM --- 2. UNTERORDNER VERARBEITEN ---
 for /d %%D in ("%INSTALL_DIR%\*") do (
     set "foundTxt="
     for %%F in ("%%~fD\*.txt") do (
@@ -57,13 +63,11 @@ for /d %%D in ("%INSTALL_DIR%\*") do (
     )
 )
 
-REM --- 3. LOSE DATEIEN ---
 for %%F in ("%INSTALL_DIR%\*.txt") do (
     set /a count_total+=1
     call :process_package "%INSTALL_DIR%" "%%~fF"
 )
 
-REM --- ABSCHLUSS-STATISTIK ---
 echo.
 echo %B%======================================================%W%
 echo %B%                INSTALLATIONS-BERICHT%W%
