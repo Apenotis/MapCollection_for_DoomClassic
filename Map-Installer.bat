@@ -14,7 +14,7 @@ set "TXT_FILE=Maps.txt"
 :main_menu
 cls
 echo %B%------------------------------------------------------%W%
-echo           %CY%DOOM KARTEN-INSTALLATIONSSERVICE%W%
+echo                 %CY%DOOM MAP INSTALLER%W%
 echo %B%------------------------------------------------------%W%
 echo.
 
@@ -54,7 +54,6 @@ if "%zip_found%"=="1" (
 echo %G%* Analysiere Karten-Strukturen...%W%
 echo.
 
-REM --- ORDNER VERARBEITEN ---
 for /d %%D in ("%INSTALL_DIR%\*") do (
     set "m_name="
     set "m_iwad="
