@@ -2,7 +2,7 @@ Installation:
 
 Damit das ganze überhaupt funktioniert benötigt man vorab einige Dinge.
 
-UzDoom		  https://github.com/UZDoom/UZDoom
+UzDoom		   https://github.com/UZDoom/UZDoom
 Doom 1  		https://www.gog.com/de/game/doom_1993
 Doom 2 			https://www.gog.com/de/game/doom_ii
 
