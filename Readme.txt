@@ -2,16 +2,15 @@ Installation:
 
 Damit das ganze überhaupt funktioniert benötigt man vorab einige Dinge.
 
-GzDoom			https://zdoom.org/downloads
+UzDoom		  https://github.com/UZDoom/UZDoom
 Doom 1  		https://www.gog.com/de/game/doom_1993
 Doom 2 			https://www.gog.com/de/game/doom_ii
 
 Optional
 
-Hexen  			https://www.gog.com/de/game/hexen_beyond_heretic
+Hexen  			    https://www.gog.com/de/game/hexen_beyond_heretic
 Hexen Addon 		https://www.gog.com/de/game/hexen_deathkings_of_the_dark_citadel
-Heretic			https://www.gog.com/de/game/heretic_shadow_of_the_serpent_riders
-Final Doom
+Heretic			    https://www.gog.com/de/game/heretic_shadow_of_the_serpent_riders
 
 Im Ordner Engine kommt GzDoom installiert 
 Im Ordner Maps / Iwad kommen eure .wad File von Doomn Doom2 und die Optionalen
